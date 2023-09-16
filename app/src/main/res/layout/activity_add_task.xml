@@ -7,7 +7,7 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toobar"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Create Tasks"
+        app:title="@string/label_createTask"
         app:navigationIcon="@drawable/baseline_navigate_before_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -33,7 +33,7 @@
        app:layout_constraintEnd_toEndOf="@id/guide_end"
        android:layout_marginTop="16dp"
        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-       android:hint="Title"
+       android:hint="@string/label_title"
        android:layout_height="wrap_content"
        app:layout_constraintTop_toBottomOf="@id/toobar">
 
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         android:layout_marginTop="16dp"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:hint="Description"
+        android:hint="@string/lable_description"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/title">
 
@@ -69,9 +69,9 @@
         app:layout_constraintTop_toBottomOf="@id/til_description"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintEnd_toStartOf="@id/til_hour"
-
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="48dp"
-        android:hint="Date"
+        android:hint="@string/label_date"
         app:startIconDrawable="@drawable/ic_calendar_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toTopOf="@id/til_date"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         app:layout_constraintStart_toEndOf="@id/til_date"
-        android:hint="Hour"
+        android:hint="@string/label_hour"
         app:startIconDrawable="@drawable/timer_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -102,6 +102,28 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_create"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:text="@string/label_create_Task"
+        android:textAllCaps="false"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintBottom_toBottomOf="@id/btn_create"
+        android:layout_marginBottom="50dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="@android:string/cancel"
+        android:textAllCaps="false"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
