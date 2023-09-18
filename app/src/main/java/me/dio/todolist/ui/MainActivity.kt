@@ -3,7 +3,10 @@ package me.dio.todolist.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import me.dio.todolist.databinding.ActivityMainBinding
+import me.dio.todolist.datasourse.TaskDataSourse
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,14 +17,23 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.rvTasks.adapter = adapter
-
         insertListeners()
     }
 
     private fun insertListeners() {
         binding.btnAdd.setOnClickListener {
-            startActivity(Intent(this, AddTaskActivity::class.java))
+            openAddTaskActivity.launch(Intent(this, AddTaskActivity::class.java))
         }
+    }
+
+    private val openAddTaskActivity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == RESULT_OK) {
+            binding.rvTasks.adapter = adapter
+            adapter.submitList(TaskDataSourse.getList())
+        }
+    }
+
+    companion object {
+        private const val CREATE_NEW_TASK = 1000
     }
 }

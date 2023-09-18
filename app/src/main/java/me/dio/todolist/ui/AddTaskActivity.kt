@@ -27,7 +27,6 @@ class AddTaskActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         insertListeners()
-
     }
     private fun insertListeners() {
         binding.tilDate.editText?.setOnClickListener {
@@ -64,6 +63,7 @@ class AddTaskActivity : AppCompatActivity() {
                 hour = binding.tilHour.text
             )
             TaskDataSourse.insertTask(task)
+            setResult(Activity.RESULT_OK)
             finish()
             Log.e("TAG", "insertListeners: " + TaskDataSourse.getList())
         }
