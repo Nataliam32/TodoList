@@ -68,4 +68,8 @@ class AddTaskActivity : AppCompatActivity() {
             Log.e("TAG", "insertListeners: " + TaskDataSourse.getList())
         }
     }
+
+    companion object {
+        const val TASK_ID = "task_id"
+    }
 }

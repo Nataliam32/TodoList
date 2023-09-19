@@ -9,4 +9,7 @@
     <string name="label_tasks">Tasks</string>
     <string name="label_description_new_task">New Task</string>
     <string name="label_description">Description</string>
+    <string name="lable_edit">Editar</string>
+    <string name="label_edit">Edit</string>
+    <string name="label_delete">Delete</string>
 </resources>
