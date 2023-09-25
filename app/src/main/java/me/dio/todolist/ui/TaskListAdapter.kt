@@ -10,6 +10,7 @@ import me.dio.todolist.R
 import me.dio.todolist.databinding.ItemTaskBinding
 import me.dio.todolist.model.Task
 
+
 class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCallBack()){
     var listenerEdit : (Task) -> Unit = {}
     var listenerDelete : (Task) -> Unit = {}

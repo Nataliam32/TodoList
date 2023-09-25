@@ -2,6 +2,7 @@ package me.dio.todolist.datasourse
 
 import me.dio.todolist.model.Task
 
+
 object TaskDataSourse {
     private val list = arrayListOf<Task>()
 
@@ -11,3 +12,4 @@ object TaskDataSourse {
         list.add(task.copy(id = list.size + 1))
     }
 }
+
