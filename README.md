@@ -11,7 +11,7 @@ The first major problem I've encountered was that some of the built-in functions
 longer available, because they were deprecated. So I had to learn how to implement those new functions
 provided by Kotlin. A good example of this problem was the replacement of *startActivityForResult*
 to *registerForActivityResult*, which are used to get back the result of an activity. This problem 
-caused me to postpone the implementation of the edit function, because, on the skill level that I 
+caused me to postpone the implementation of the edit function, bcause, on the skill level that I 
 am, I cannot accomplish that.
 However, when using this same method in another part of my code, I managed to fix all the errors and
 use the new function provided by Kotlin, which gave me more confidence to keep studying Kotlin and 
@@ -19,8 +19,8 @@ to keep making projects like this one.
 
 ## Screenshots
 
-![Opening Screen](/Users/nataliademedeiroscosta/Documents/TodoList/Opening_screen.png)
-![Create Task Screen](/Users/nataliademedeiroscosta/Documents/TodoList/Create_list_screen.png)
-![](/Users/nataliademedeiroscosta/Documents/TodoList/Activity_screen.png)
+![Opening Screen](Opening_screen.png)
+![Create Task Screen](Create_list_screen.png)
+![Activity Screen](Activity_screen.png)
 
 
