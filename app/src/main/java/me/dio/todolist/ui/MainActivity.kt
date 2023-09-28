@@ -33,15 +33,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private val openEditTaskActivity = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { result ->
-        if (result.resultCode == RESULT_OK) {
-            binding.rvTasks.adapter = adapter
-            updateTask()
-        }
-    }
-
     private val openAddTaskActivity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             binding.rvTasks.adapter = adapter
