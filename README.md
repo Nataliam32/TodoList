@@ -17,4 +17,10 @@ However, when using this same method in another part of my code, I managed to fi
 use the new function provided by Kotlin, which gave me more confidence to keep studying Kotlin and 
 to keep making projects like this one.
 
+## Screenshots
+
+![Opening Screen](/Users/nataliademedeiroscosta/Documents/TodoList/Opening_screen.png)
+![Create Task Screen](/Users/nataliademedeiroscosta/Documents/TodoList/Create_list_screen.png)
+![](/Users/nataliademedeiroscosta/Documents/TodoList/Activity_screen.png)
+
 
