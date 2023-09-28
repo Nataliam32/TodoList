@@ -10,9 +10,7 @@ import me.dio.todolist.R
 import me.dio.todolist.databinding.ItemTaskBinding
 import me.dio.todolist.model.Task
 
-
 class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCallBack()){
-    var listenerEdit : (Task) -> Unit = {}
     var listenerDelete : (Task) -> Unit = {}
 
     inner class TaskViewHolder(private val binding: ItemTaskBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -29,7 +27,6 @@ class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCa
             popupMenu.menuInflater.inflate(R.menu.popup_menu, popupMenu.menu)
             popupMenu.setOnMenuItemClickListener {
                 when(it.itemId) {
-                    R.id.action_edit -> listenerEdit(item)
                     R.id.action_delete -> listenerDelete(item)
                 }
                 return@setOnMenuItemClickListener true

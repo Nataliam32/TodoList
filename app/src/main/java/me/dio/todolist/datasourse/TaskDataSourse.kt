@@ -11,5 +11,9 @@ object TaskDataSourse {
     fun insertTask(task: Task) {
         list.add(task.copy(id = list.size + 1))
     }
+
+    fun deleteTask(task: Task) {
+        list.remove(task)
+    }
 }
 

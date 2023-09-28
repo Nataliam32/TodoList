@@ -15,4 +15,5 @@
     <string name="label_editTitle">Title</string>
     <string name="label_editDescription">Description</string>
     <string name="label_save">Save</string>
+    <string name="lable_no_tasks">Ops, você ainda não \n possui nenhuma tarefa</string>
 </resources>

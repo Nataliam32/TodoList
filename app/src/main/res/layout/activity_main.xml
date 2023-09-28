@@ -6,17 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/whiter_background"
+        android:scaleType="centerCrop"
+        android:alpha="0.7" />
+
     <TextView
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/tv_title"
         android:text="@string/label_tasks"
         android:textColor="@color/black"
-        android:textSize="24sp"
-        android:layout_margin="16dp"
+        android:textSize="36sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"/>
+
+    <include layout="@layout/empty_state" android:id="@+id/include" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_tasks"
@@ -27,14 +37,15 @@
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="8"
-        tools:listitem="@layout/item_task" />
+        tools:listitem="@layout/item_task"
+        tools:visibility="gone"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="16dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:backgroundTint="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/label_description_new_task"
